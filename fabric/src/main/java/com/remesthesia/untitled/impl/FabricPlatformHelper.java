@@ -6,6 +6,6 @@ public final class FabricPlatformHelper implements IPlatformHelper{
 
     @Override
     public Platform getPlatform() {
-        return Platform.Fabric;
+        return Platform.FABRIC;
     }
 }

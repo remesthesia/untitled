@@ -6,6 +6,6 @@ public final class NeoForgePlatformHelper implements IPlatformHelper{
 
     @Override
     public Platform getPlatform() {
-        return Platform.NeoForge;
+        return Platform.NEOFORGE;
     }
 }
