@@ -1,4 +1,7 @@
 package com.remesthesia.untitled.impl;
 
+import com.remesthesia.untitled.api.Platform;
+
 public interface IPlatformHelper {
+    Platform getPlatform();
 }
