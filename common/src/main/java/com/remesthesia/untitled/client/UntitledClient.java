@@ -1,5 +1,5 @@
 package com.remesthesia.untitled.client;
 
-public final class TemplateClient {
+public final class UntitledClient {
     public static void init() {}
 }

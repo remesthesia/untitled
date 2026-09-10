@@ -16,10 +16,10 @@
     "environment": "*",
     "entrypoints": {
         "main": [
-            "com.remesthesia.untitled.TemplateFabric"
+            "com.remesthesia.untitled.UntitledFabric"
         ],
         "client": [
-            "com.remesthesia.untitled.client.TemplateFabricClient"
+            "com.remesthesia.untitled.client.UntitledFabricClient"
         ]
     },
     "mixins": [
