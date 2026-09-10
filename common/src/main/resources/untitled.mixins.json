@@ -1,7 +1,7 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "com.remesthesia.template.mixin",
+  "package": "com.remesthesia.untitled.mixin",
   "compatibilityLevel": "JAVA_25",
   "mixins": [],
   "client": [],

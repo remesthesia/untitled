@@ -1,4 +1,4 @@
-package com.remesthesia.template.client;
+package com.remesthesia.untitled.client;
 
 import net.fabricmc.api.ClientModInitializer;
 
