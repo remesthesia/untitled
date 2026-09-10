@@ -5,7 +5,7 @@ import com.remesthesia.untitled.api.Platform;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.loader.api.FabricLoader;
 
-public final class FabricPlatformHelper implements IPlatformHelper{
+public final class FabricPlatformHelper implements IPlatformHelper {
 
     @Override
     public boolean isDevelopmentEnvironment() {

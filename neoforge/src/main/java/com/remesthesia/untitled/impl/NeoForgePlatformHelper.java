@@ -5,7 +5,7 @@ import com.remesthesia.untitled.api.Platform;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.fml.loading.FMLLoader;
 
-public final class NeoForgePlatformHelper implements IPlatformHelper{
+public final class NeoForgePlatformHelper implements IPlatformHelper {
 
     @Override
     public boolean isDevelopmentEnvironment() {
