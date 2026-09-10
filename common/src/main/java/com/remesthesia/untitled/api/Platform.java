@@ -2,6 +2,6 @@ package com.remesthesia.untitled.api;
 
 public enum Platform {
     Fabric,
-    Forge,
+    @Deprecated Forge,
     NeoForge
 }
