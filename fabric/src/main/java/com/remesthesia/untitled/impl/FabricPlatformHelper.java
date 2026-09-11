@@ -20,7 +20,7 @@ public final class FabricPlatformHelper implements IPlatformHelper {
     }
 
     @Override
-    public Path getGameDirectory() {
+    public Path getDirectory() {
         return FabricLoader.getInstance().getGameDir();
     }
 

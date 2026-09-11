@@ -11,7 +11,7 @@ public interface IPlatformHelper {
 
     Environment getEnvironment();
 
-    Path getGameDirectory();
+    Path getDirectory();
 
     Platform getPlatform();
 }

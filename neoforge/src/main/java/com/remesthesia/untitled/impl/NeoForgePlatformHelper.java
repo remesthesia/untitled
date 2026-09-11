@@ -20,7 +20,7 @@ public final class NeoForgePlatformHelper implements IPlatformHelper {
     }
 
     @Override
-    public Path getGameDirectory() {
+    public Path getDirectory() {
         return FMLLoader.getCurrent().getGameDir();
     }
 
