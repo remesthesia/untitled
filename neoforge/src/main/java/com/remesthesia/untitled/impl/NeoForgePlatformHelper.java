@@ -5,6 +5,8 @@ import com.remesthesia.untitled.api.Platform;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.fml.loading.FMLLoader;
 
+import java.nio.file.Path;
+
 public final class NeoForgePlatformHelper implements IPlatformHelper {
 
     @Override
@@ -15,6 +17,11 @@ public final class NeoForgePlatformHelper implements IPlatformHelper {
     @Override
     public Environment getEnvironment() {
         return FMLLoader.getCurrent().getDist() == Dist.CLIENT ? Environment.Client : Environment.Server;
+    }
+
+    @Override
+    public Path getGameDirectory() {
+        return FMLLoader.getCurrent().getGameDir();
     }
 
     @Override

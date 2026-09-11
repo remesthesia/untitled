@@ -5,6 +5,8 @@ import com.remesthesia.untitled.api.Platform;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.loader.api.FabricLoader;
 
+import java.nio.file.Path;
+
 public final class FabricPlatformHelper implements IPlatformHelper {
 
     @Override
@@ -15,6 +17,11 @@ public final class FabricPlatformHelper implements IPlatformHelper {
     @Override
     public Environment getEnvironment() {
         return FabricLoader.getInstance().getEnvironmentType() == EnvType.CLIENT ? Environment.Client : Environment.Server;
+    }
+
+    @Override
+    public Path getGameDirectory() {
+        return FabricLoader.getInstance().getGameDir();
     }
 
     @Override
