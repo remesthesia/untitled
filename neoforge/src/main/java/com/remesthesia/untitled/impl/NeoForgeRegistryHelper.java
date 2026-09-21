@@ -5,6 +5,7 @@ import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.Identifier;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.neoforged.bus.api.IEventBus;
@@ -31,6 +32,14 @@ public final class NeoForgeRegistryHelper implements IRegistryHelper {
         final var REGISTER = (DeferredRegister.Blocks) REGISTRY_TO_REGISTER_MAP.computeIfAbsent(BuiltInRegistries.BLOCK, _ -> DeferredRegister.createBlocks(id.getNamespace()));
 
         return REGISTER.registerBlock(id.getPath(), block, properties);
+    }
+
+    @Override
+    public Holder<Item> registerItem(Identifier id, Function<Item.Properties, ? extends Item> item, Supplier<Item.Properties> properties) {
+        final var REGISTRY_TO_REGISTER_MAP = NAMESPACE_TO_REGISTRY_MAP.computeIfAbsent(id.getNamespace(), _ -> new HashMap<>());
+        final var REGISTER = (DeferredRegister.Items) REGISTRY_TO_REGISTER_MAP.computeIfAbsent(BuiltInRegistries.ITEM, _ -> DeferredRegister.createItems(id.getNamespace()));
+
+        return REGISTER.registerItem(id.getPath(), item, properties);
     }
 
     public void registerAll(IEventBus eventBus) {
