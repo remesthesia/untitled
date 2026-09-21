@@ -14,5 +14,6 @@ public interface IRegistryHelper {
     <T> Holder<T> register(final Registry<T> registry, final Identifier id, final Function<Identifier, ? extends T> item);
 
     Holder<Block> registerBlock(final Identifier id, final Function<BlockBehaviour.Properties, ? extends Block> block, final Supplier<BlockBehaviour.Properties> properties);
+
     Holder<Item> registerItem(final Identifier id, final Function<Item.Properties, ? extends Item> item, final Supplier<Item.Properties> properties);
 }
