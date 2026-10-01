@@ -8,7 +8,9 @@ public final class Untitled {
     public static final String MOD_ID = "untitled";
     public static final Logger LOGGER = LoggerFactory.getLogger("Untitled");
 
-    public static void init() {}
+    public static void init() {
+
+    }
 
     public static Identifier getIdentifier(String path) {
         return Identifier.fromNamespaceAndPath(MOD_ID, path);
