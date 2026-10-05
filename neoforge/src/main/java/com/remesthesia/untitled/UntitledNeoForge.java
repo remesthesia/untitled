@@ -12,6 +12,7 @@ import net.minecraft.resources.RegistryDataLoader;
 import net.minecraft.server.packs.resources.SimpleJsonResourceReloadListener;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.common.Mod;
+import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 
 @Mod(Untitled.MOD_ID)
 public final class UntitledNeoForge {
@@ -30,4 +31,6 @@ public final class UntitledNeoForge {
                     .addProperty("name", "minecraft:sand");
                 });
     }
+
+
 }
