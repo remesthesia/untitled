@@ -4,6 +4,7 @@ import com.remesthesia.untitled.impl.UntitledServices;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.CreativeModeTab;
 
+import java.util.function.BiConsumer;
 import java.util.function.Consumer;
 
 public interface ItemHelper {
@@ -13,5 +14,5 @@ public interface ItemHelper {
 
     void modifyCreativeModeTab(ResourceKey<CreativeModeTab> key, Consumer<CreativeModeTabModifier> modifier);
 
-    void modifyAllCreativeModeTabs(Consumer<CreativeModeTabsModifier> modifier);
+    void modifyAllCreativeModeTabs(BiConsumer<CreativeModeTab, CreativeModeTabModifier> modifier);
 }

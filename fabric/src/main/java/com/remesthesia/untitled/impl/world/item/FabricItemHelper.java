@@ -1,6 +1,5 @@
 package com.remesthesia.untitled.impl.world.item;
 
-import com.remesthesia.untitled.api.world.item.CreativeModeTabsModifier;
 import com.remesthesia.untitled.api.world.item.CreativeModeTabModifier;
 import com.remesthesia.untitled.api.world.item.ItemHelper;
 import net.fabricmc.fabric.api.creativetab.v1.CreativeModeTabEvents;
@@ -8,6 +7,7 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.CreativeModeTab;
 import org.jetbrains.annotations.ApiStatus.Internal;
 
+import java.util.function.BiConsumer;
 import java.util.function.Consumer;
 
 @Internal
@@ -20,9 +20,9 @@ public final class FabricItemHelper implements ItemHelper {
     }
 
     @Override
-    public void modifyAllCreativeModeTabs(Consumer<CreativeModeTabsModifier> modifier) {
+    public void modifyAllCreativeModeTabs(BiConsumer<CreativeModeTab, CreativeModeTabModifier> modifier) {
         CreativeModeTabEvents.MODIFY_OUTPUT_ALL.register((tab, output) -> {
-            modifier.accept(new FabricCreativeModeTabsModifier(tab, output));
+            modifier.accept(tab, new FabricCreativeModeTabModifier(output));
         });
     }
 }
