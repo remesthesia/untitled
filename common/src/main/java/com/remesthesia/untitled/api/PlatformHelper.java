@@ -6,4 +6,6 @@ public interface PlatformHelper {
     static PlatformHelper getInstance() {
         return Services.PLATFORM_HELPER_INSTANCE;
     }
+
+    Platform getPlatform();
 }
