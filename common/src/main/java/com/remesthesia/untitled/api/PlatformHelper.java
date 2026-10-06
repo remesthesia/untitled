@@ -11,11 +11,18 @@ public interface PlatformHelper {
     }
 
     Path getConfigDirectory();
+
     Environment getEnvironment();
+
     Path getGameDirectory();
+
     String getGameVersion();
+
     Optional<Mod> getMod(String modID);
+
     Platform getPlatform();
+
     boolean isDevelopmentEnvironment();
+
     boolean isModLoaded(String modID);
 }
