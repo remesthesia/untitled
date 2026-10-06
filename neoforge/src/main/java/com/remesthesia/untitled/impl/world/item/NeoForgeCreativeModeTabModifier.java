@@ -5,7 +5,10 @@ import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.ItemLike;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
+import org.jetbrains.annotations.ApiStatus;
+import org.jetbrains.annotations.ApiStatus.Internal;
 
+@Internal
 public record NeoForgeCreativeModeTabModifier(BuildCreativeModeTabContentsEvent event) implements CreativeModeTabModifier {
     @Override
     public void append(ItemLike... items) {
