@@ -1,6 +1,7 @@
 package com.remesthesia.untitled.mixin.fabric.client;
 
 import com.mojang.logging.LogUtils;
+import com.remesthesia.untitled.Untitled;
 import net.minecraft.client.resources.SplashManager;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.Identifier;
@@ -39,7 +40,7 @@ final class SplashManagerMixin {
             try (BufferedReader reader = resource.openAsReader()) {
                 list.addAll(reader.lines().map(String::trim).filter(line -> line.hashCode() != 125780783).map(SplashManagerMixin::literalSplash).toList());
             } catch (IOException e) {
-                LogUtils.getLogger().warn("Invalid {} in resourcepack: '{}'", SPLASHES_LOCATION.getPath(), resource.sourcePackId(), e);
+                Untitled.LOGGER.warn("Invalid {} in resourcepack: '{}'", SPLASHES_LOCATION.getPath(), resource.sourcePackId(), e);
             }
         }
 
