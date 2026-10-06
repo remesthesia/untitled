@@ -38,8 +38,7 @@ public final class NeoForgePlatformHelper implements PlatformHelper {
 
     @Override
     public Optional<Mod> getMod(String modID) {
-        var modContainer = ModList.get().getModContainerById(modID);
-        return modContainer.map(container -> new NeoForgeMod(container, ModList.get().getModFileById(modID)));
+        return ModList.get().getModContainerById(modID).map(modContainer -> new NeoForgeMod(modContainer, ModList.get().getModFileById(modID)));
     }
 
     @Override

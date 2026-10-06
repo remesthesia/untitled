@@ -37,8 +37,7 @@ public final class FabricPlatformHelper implements PlatformHelper {
 
     @Override
     public Optional<Mod> getMod(String modID) {
-        var modContainer = FabricLoader.getInstance().getModContainer(modID);
-        return modContainer.map(FabricMod::new);
+        return FabricLoader.getInstance().getModContainer(modID).map(FabricMod::new);
     }
 
     @Override
