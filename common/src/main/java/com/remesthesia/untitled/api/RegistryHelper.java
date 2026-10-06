@@ -1,6 +1,6 @@
 package com.remesthesia.untitled.api;
 
-import com.remesthesia.untitled.impl.Services;
+import com.remesthesia.untitled.impl.UntitledServices;
 import net.minecraft.core.Registry;
 import net.minecraft.core.component.DataComponentType;
 import net.minecraft.resources.Identifier;
@@ -17,7 +17,7 @@ import java.util.function.UnaryOperator;
 
 public interface RegistryHelper {
      static RegistryHelper getInstance() {
-        return Services.REGISTRY_HELPER_INSTANCE;
+        return UntitledServices.REGISTRY_HELPER_INSTANCE;
     }
 
     <T> RegistrySupplier<T> register(final Registry<? super T> registry, final Identifier id, final Supplier<? extends T> item);

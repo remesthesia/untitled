@@ -1,13 +1,13 @@
 package com.remesthesia.untitled.api;
 
-import com.remesthesia.untitled.impl.Services;
+import com.remesthesia.untitled.impl.UntitledServices;
 
 import java.nio.file.Path;
 import java.util.Optional;
 
 public interface PlatformHelper {
     static PlatformHelper getInstance() {
-        return Services.PLATFORM_HELPER_INSTANCE;
+        return UntitledServices.PLATFORM_HELPER_INSTANCE;
     }
 
     Path getConfigDirectory();
