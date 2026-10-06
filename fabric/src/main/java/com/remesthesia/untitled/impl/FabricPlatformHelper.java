@@ -1,6 +1,7 @@
 package com.remesthesia.untitled.impl;
 
 import com.remesthesia.untitled.api.Environment;
+import com.remesthesia.untitled.api.Mod;
 import com.remesthesia.untitled.api.Platform;
 import com.remesthesia.untitled.api.PlatformHelper;
 import net.fabricmc.api.EnvType;
@@ -10,6 +11,7 @@ import net.fabricmc.loader.impl.game.minecraft.MinecraftGameProvider;
 import org.jetbrains.annotations.ApiStatus.Internal;
 
 import java.nio.file.Path;
+import java.util.Optional;
 
 @Internal
 public final class FabricPlatformHelper implements PlatformHelper {
@@ -31,6 +33,12 @@ public final class FabricPlatformHelper implements PlatformHelper {
     @Override
     public String getGameVersion() {
         return FabricLoader.getInstance().getRawGameVersion();
+    }
+
+    @Override
+    public Optional<Mod> getMod(String modID) {
+        var modContainer = FabricLoader.getInstance().getModContainer(modID);
+        return modContainer.map(FabricMod::new);
     }
 
     @Override
