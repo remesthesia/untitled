@@ -1,0 +1,29 @@
+{
+    "schemaVersion": 1,
+    "name": "${mod_name}",
+    "authors": [
+        "${mod_author}"
+    ],
+    "id": "${mod_id}",
+    "license": "${mod_license}",
+    "description": "${mod_description}",
+    "icon": "${mod_id}.png",
+    "version": "${version}",
+    "environment": "*",
+    "entrypoints": {
+        "main": [
+            "com.remesthesia.template.TemplateFabric"
+        ]
+    },
+    "mixins": [
+        "${mod_id}.mixins.json",
+        "${mod_id}.fabric.mixins.json"
+    ],
+    "depends": {
+        "fabricloader": ">=${fabric_loader_version}",
+        "fabric-api": "*",
+        "minecraft": "~${minecraft_version}",
+        "java": ">=${java_version}"
+    }
+}
+  
