@@ -1,7 +1,7 @@
-package com.remesthesia.template.platform;
+package com.remesthesia.untitled.platform;
 
-import com.remesthesia.template.Template;
-import com.remesthesia.template.platform.services.IPlatformHelper;
+import com.remesthesia.untitled.Untitled;
+import com.remesthesia.untitled.platform.services.IPlatformHelper;
 
 import java.util.ServiceLoader;
 
@@ -13,7 +13,7 @@ public final class Services {
                 .findFirst()
                 .orElseThrow(() -> new NullPointerException("Failed to load service for " + clazz.getName()));
 
-        Template.LOGGER.debug("Loaded {} for service {}", loadedService, clazz);
+        Untitled.LOGGER.debug("Loaded {} for service {}", loadedService, clazz);
         return loadedService;
     }
 }

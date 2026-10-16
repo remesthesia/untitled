@@ -1,6 +1,6 @@
-package com.remesthesia.template.platform;
+package com.remesthesia.untitled.platform;
 
-import com.remesthesia.template.platform.services.IPlatformHelper;
+import com.remesthesia.untitled.platform.services.IPlatformHelper;
 import net.neoforged.fml.ModList;
 import net.neoforged.fml.loading.FMLLoader;
 

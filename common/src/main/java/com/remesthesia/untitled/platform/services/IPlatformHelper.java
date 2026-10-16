@@ -1,4 +1,4 @@
-package com.remesthesia.template.platform.services;
+package com.remesthesia.untitled.platform.services;
 
 public interface IPlatformHelper {
 
