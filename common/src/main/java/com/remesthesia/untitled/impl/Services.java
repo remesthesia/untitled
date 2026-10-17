@@ -1,12 +1,12 @@
-package com.remesthesia.untitled.platform;
+package com.remesthesia.untitled.impl;
 
 import com.remesthesia.untitled.Untitled;
-import com.remesthesia.untitled.platform.services.IPlatformHelper;
+import com.remesthesia.untitled.api.PlatformHelper;
 
 import java.util.ServiceLoader;
 
 public final class Services {
-    public static final IPlatformHelper PLATFORM = load(IPlatformHelper.class);
+    public static PlatformHelper PLATFORM_HELPER_INSTANCE = Services.load(PlatformHelper.class);
 
     public static <T> T load(Class<T> clazz) {
         final T loadedService = ServiceLoader.load(clazz, Services.class.getClassLoader())
