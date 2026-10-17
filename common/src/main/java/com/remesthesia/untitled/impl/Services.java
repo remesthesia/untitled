@@ -5,6 +5,9 @@ import com.remesthesia.untitled.api.PlatformHelper;
 
 import java.util.ServiceLoader;
 
+import static org.jetbrains.annotations.ApiStatus.*;
+
+@Internal
 public final class Services {
     public static PlatformHelper PLATFORM_HELPER_INSTANCE = Services.load(PlatformHelper.class);
 
